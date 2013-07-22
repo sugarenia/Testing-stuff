@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Workable Style Guide</title>
+
+<meta charset="utf-8" />
+<link rel="stylesheet" media="screen" href="css/demo.css" />
+<link rel="stylesheet" media="screen" href="css/prism.css" />
+
+<!-- enable HTML5 elements in IE7+8 -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="//use.typekit.net/gnf3ych.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script type="text/javascript" src="js/prism.js"></script>
+</head>
+
+<body class="language-markup">
+  <h1>Workable Styles</h1>
+
+  <h2>Forms</h2>
+  <form>
+    <fieldset>
+      <div class="form-row">
+        <label for="field-text" class="form-row-label">Text input</label> 
+        <input type="text" id="field-text" />
+      </div>
+      <div class="form-row">
+        <label for="field-placeholder" class="form-row-label">Text input with placeholder</label> 
+        <input type="text" placeholder="I'm placeholder text" id="field-placeholder">
+      </div>
+      <div class="form-row">
+        <label for="field-readonly" class="form-row-label">Readonly input</label> 
+        <input type="text" value="Read only text input" readonly id="field-readonly" />
+      </div>
+      <div class="form-row">
+        <label for="field-disabled" class="form-row-label">Disabled input</label> 
+        <input type="text" value="Disabled text input" disabled id="field-disabled" />
+      </div>
+      <div class="form-row required">
+        <label for="field-required" class="form-row-label">Required input</label> 
+        <input type="text" required id="field-required" />
+      </div>
+      <div class="form-row">
+        <label for="field-email" class="form-row-label">Email input</label> 
+        <input type="email" id="field-email" />
+      </div>
+      <div class="form-row">
+        <label for="field-search" class="form-row-label">Search input</label> 
+        <input type="search" id="field-search" />
+      </div>
+      <div class="form-row">
+        <label for="speech" class="form-row-label">Speech recognition input</label> 
+        <input type="text" id="speech" name="speech" x-webkit-speech="" />
+      </div>
+      <div class="form-row">
+        <label for="field-tel" class="form-row-label">Tel input</label> 
+        <input type="tel" id="field-tel" />
+      </div>
+      <div class="form-row">
+        <label for="field-url" class="form-row-label">URL input</label> 
+        <input type="url" placeholder="http://" id="field-url" />
+      </div>
+      <div class="form-row">
+        <label for="field-password" class="form-row-label">Password input</label> 
+        <input type="password" value="password" id="field-password" />
+      </div>
+      <div class="form-row">
+        <label for="field-select" class="form-row-label">Select field</label> 
+        <select id="field-select">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="field-select-multiple" class="form-row-label">Multiple select field</label>
+        <select multiple size="5" id="field-select-multiple">
+          <option>Option 1</option><option>Option 2</option><option>Option 3</option><option>Option 4</option><option>Option 5</option><option>Option 6</option><option>Option 7</option><option>Option 8</option><option>Option 9</option><option>Option 10</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="field-radio" class="form-row-label">Radio input</label> 
+        <input type="radio" name="rad" id="field-radio" />
+      </div>
+      <div class="form-row">
+        <label for="field-checkbox" class="form-row-label">Checkbox input</label> 
+        <input type="checkbox" id="field-checkbox" />
+      </div>
+      <div class="form-row">
+        <label for="field-radio-input" class="form-row-label">Radio input</label>
+        <label><input type="radio" name="rad" id="field-radio-input"> Radio input</label>
+      </div>
+      <div class="form-row">
+        <label for="field-checkbox-input" class="form-row-label">Checkbox input</label>
+        <label><input type="checkbox" id="field-checkbox-input"> Checkbox input</label>
+      </div>
+      <div class="form-row">
+        <label for="field-file" class="form-row-label">File input</label> 
+        <input type="file" id="field-file" />
+      </div>
+      <div class="form-row">
+        <label for="field-textarea" class="form-row-label">Textarea</label> 
+        <textarea rows="5" id="field-textarea">Textarea text</textarea>
+      </div>
+      <div class="form-row">
+        <label for="field-color" class="form-row-label">Color input</label> 
+        <input type="color" value="#000000" id="field-color" />
+      </div>
+      <div class="form-row">
+        <label for="field-number" class="form-row-label">Number input</label> 
+        <input type="number" value="5" min="0" max="10" id="field-number" />
+      </div>
+      <div class="form-row">
+        <label for="range" class="form-row-label">Range input</label> 
+        <input type="range" id="range" value="0" min="0" max="100"> <output for="range">0</output> <script>document.querySelector('#range').onchange = function(e) {e.target.nextElementSibling.innerText = e.target.value;}</script>
+      </div>
+      <div class="form-row">
+        <label for="field-date" class="form-row-label">Date input</label> 
+        <input type="date" id="field-date" />
+      </div>
+      <div class="form-row">
+        <label for="field-month" class="form-row-label">Month input</label> 
+        <input type="month" id="field-month" />
+      </div>
+      <div class="form-row">
+        <label for="field-week" class="form-row-label">Week input</label> 
+        <input type="week" id="field-week" />
+      </div>
+      <div class="form-row">
+        <label for="field-time" class="form-row-label">Time input</label> 
+        <input type="time" id="field-time" />
+      </div>
+      <div class="form-row">
+        <label for="field-datetime" class="form-row-label">Datetime input</label> 
+        <input type="datetime" id="field-datetime" />
+      </div>
+      <div class="form-row">
+        <label for="field-datetime-local" class="form-row-label">Datetime-local input</label> 
+        <input type="datetime-local" id="field-datetime-local" />
+      </div>
+    </fieldset>
+  </form>
+
+  <h3>Special classes</h3>
+  <h4>Icon fields (only supports inputs)</h4>
+
+  <div class="demo">
+    <form>
+      <fieldset>
+        <div class="form-row">
+          <div class="field-icon">
+            <input type="text" placeholder="Username" />  
+            <i class="icon icon-user"></i>
+          </div>
+          <div class="field-icon">
+            <input type="text" placeholder="Password" />  
+            <i class="icon icon-pencil"></i>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <h4>Larger fields</h4>
+  <form>
+    <fieldset>
+      <div class="form-row">
+        <input type="text" placeholder="Username" class="field-large" />  
+      </div>
+    </fieldset>
+  </form>
+
+  <h4>Larger icon fields</h4>
+  <form>
+    <fieldset>
+      <div class="form-row">
+        <div class="field-icon">
+          <input type="text" placeholder="Username" class="field-large" />  
+          <i class="icon icon-flow-tree"></i>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+  <h3>Helper text</h3>
+  <h4>Block</h4>
+  <form>
+    <fieldset>
+      <div class="form-row">
+        <input type="text" placeholder="Username" class="field-large" />  
+        <span class="help-block">This is some block-level helper text. Nice eh?</span>
+      </div>
+    </fieldset>
+  </form>
+
+  <h4>Inline</h4>
+  <form>
+    <fieldset>
+      <div class="form-row">
+        <input type="text" placeholder="Username" class="field-large" />  
+        <span class="help-inline">This is some block-level helper text. Nice eh?</span>
+      </div>
+    </fieldset>
+  </form>
+
+  <h2>Buttons</h2>
+
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Standard buttons</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <div class="l-preview">
+        <p>
+          <button class="btn" type="button">Button</button>
+          <input class="btn" type="submit" value="Submit" />
+          <a class="btn" href="#">Anchor</a>
+        </p>
+        <p>
+          <button class="btn-primary" type="button">Button</button>
+          <input class="btn-primary" type="submit" value="Submit" />
+          <a class="btn-primary" href="#">Anchor</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Alerts</h2>
+
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Simple style</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <div class="alert">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+      <div class="alert alert-success">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+      <div class="alert alert-error">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+      <div class="alert alert-info">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+    </div>
+  </div>
+
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Block style</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <div class="alert alert-block">
+        <i class="icon icon-alert"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+      <div class="alert alert-success alert-block">
+        <i class="icon icon-ok"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+      <div class="alert alert-error alert-block">
+        <i class="icon icon-block"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+      <div class="alert alert-info alert-block">
+        <i class="icon icon-info"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Opaque style</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <div class="alert alert-opaque">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+      <div class="alert alert-success alert-opaque">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+      <div class="alert alert-error alert-opaque">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+      <div class="alert alert-info alert-opaque">
+        <strong>Hello!</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec pretium urna, sit amet sollicitudin neque. 
+      </div>
+    </div>
+  </div>
+
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Opaque &amp; block style</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <div class="alert alert-opaque alert-block">
+        <i class="icon icon-alert"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+      <div class="alert alert-opaque alert-success alert-block">
+        <i class="icon icon-ok"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+      <div class="alert alert-opaque alert-error alert-block">
+        <i class="icon icon-block"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+      <div class="alert alert-opaque alert-info alert-block">
+        <i class="icon icon-info"></i>
+        <h4>Hello!</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac semper velit, id molestie leo. Etiam consequat dolor id sollicitudin imperdiet.</p> 
+        <p>Nam eget felis mi. Suspendisse eget augue fringilla, rhoncus dolor non, scelerisque tortor. Praesent ultrices arcu nec diam tincidunt aliquam.</p>
+      </div>
+    </div>
+  </div>
+
+  <h2>Navigation</h2>
+
+  <!-- Navbar -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Navbar</h3>
+      <p>This is the fixed navbar that appears on top of every page. Shown here positioned statically for demo purposes.</p>
+    </div>
+
+    <div class="l-content">
+      <div class="l-preview">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a href="#" class="brand"><img src="http://lvh.me:3000/assets/logo.png" /></a>
+            <ul class="nav">
+              <li class="active"><a href="#">Dashboard</a></li>
+              <li><a href="#">Activity</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l-code">
+<pre><code>tralala</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- / Navbar -->
+
+  <!-- Basic nav list -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Basic list of links</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+
+    <div class="l-content">
+      <ul class="nav-list">
+        <li class="nav-header">Account management</li>
+        <li><a href="#">Support center</a></li>
+        <li><a href="#">Support center</a></li>
+        <li><a href="#">Support center</a></li>
+        <li><a href="#">Support center</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- / Basic nav list -->
+
+  <!-- Basic nav list with icons -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Basic list with icons</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <ul class="nav-list">
+        <li class="nav-header">Account management</li>
+        <li><i class="icon icon-user"></i> <a href="#">Support center</a></li>
+        <li><i class="icon icon-block"></i> <a href="#">Support center</a></li>
+        <li><i class="icon icon-alert"></i> <a href="#">Support center</a></li>
+        <li><i class="icon icon-mail"></i> <a href="#">Support center</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- / Basic nav list with icons -->
+
+  <!-- Block list -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Block list</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <ul class="nav-list block">
+        <li class="nav-header">Account management</li>
+        <li><i class="icon icon-user"></i> <a href="#">Support center</a></li>
+        <li class="active"><i class="icon icon-block"></i> <a href="#">Support center</a></li>
+        <li><i class="icon icon-alert"></i> <a href="#">Support center</a></li>
+        <li><i class="icon icon-mail"></i> <a href="#">Support center</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- / Block list -->
+
+  <!-- Wizard steps -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Wizard step list</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <ul class="nav-list wizard">
+        <li>
+          <a href="">
+            <i class="icon icon-briefcase"></i> 
+            <div class="nav-step">The Job</div>
+            <p class="nav-summary">Tell applicants what the job involves and why it's great to work at Taxibeat.</p>
+          </a>
+        </li>
+        <li class="active">
+          <a href="">
+            <i class="icon icon-user"></i> 
+            <div class="nav-step">Screen</div>
+            <p class="nav-summary">Define what the ideal candidate looks like and ask candidates what you need to know.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="icon icon-user"></i> 
+            <div class="nav-step">Publish</div>
+            <p class="nav-summary">Make the job available to candidates and start receiving applications.</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="icon icon-user"></i> 
+            <div class="nav-step">Collaborate</div>
+            <p class="nav-summary">Who's working on this? Set up your hiring team.</p>
+          </a>
+        </li>
+      </ul>      
+    </div>
+  </div>
+  <!-- / Wizard steps -->
+
+  <!-- Nav pills --> 
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Pills</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <div class="l-preview">
+        <ul class="nav-pills">
+          <li class="active"><a href="#">Avatar</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+
+        <ul class="nav-pills">
+          <li><a href="#">Avatar</a></li>
+          <li class="active"><a href="#">Profile</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+      </div>
+
+      <div class="l-code">
+<pre><code>  &lt;ul class="nav-pills"&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;Avatar&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;History&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- / Nav pills --> 
+
+  <!-- Nav tabs -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Tabs</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+
+    <div class="l-content">
+      <div class="l-preview">
+        <ul class="nav-tabs">
+          <li><a href="#">Avatar</a></li>
+          <li class="active"><a href="#">Profile</a></li>
+          <li><a href="#">History</a></li>
+        </ul>
+
+        <ul class="nav-tabs">
+          <li><a href="#"><i class="icon icon-user"></i> Avatar</a></li>
+          <li class="active"><a href="#"><i class="icon icon-alert"></i> Profile</a></li>
+          <li><a href="#"><i class="icon icon-pencil"></i> History</a></li>
+        </ul>
+      </div>
+
+      <div class="l-code">
+
+<pre><code>  &lt;ul class="nav-tabs"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Avatar&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;History&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- / Nav tabs -->
+
+  <!-- Pagination -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Pagination</h3>
+      <p>You can use the class <code>.centered</code> or <code>.right</code> to define the align of the pagination module. Default align is left.</p>
+      <p>If you want to disable clicking on disabled or active items, use <code>span</code> instead of <code>a</code>.</p>
+    </div>
+
+    <div class="l-content">
+      <div class="l-preview">
+        <div class="nav-pagination centered">
+          <ul>
+            <li class="disabled"><span>&larr;</span></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&rarr;</a></li>
+          </ul>
+        </div>
+        <div class="nav-pagination right">
+          <ul>
+            <li class="disabled"><span>&larr;</span></li>
+            <li class="active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="l-code">
+
+<pre><code>&lt;div class="nav-pagination centered"&gt;
+  &lt;ul&gt;
+    &lt;li class="disabled"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+    &lt;li class="active"&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- / Pagination -->
+
+  <h2>Helper classes</h2>
+
+  <!-- CSS arrows -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>CSS Arrows</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+    </div>
+    <div class="l-content">
+      <div class="l-preview">
+        <div class="arrow arrow-up">this is a nice block of text</div>
+        <div class="arrow arrow-down">this is a nice block of text</div>
+        <div class="arrow arrow-left">this is a nice block of text</div>
+        <div class="arrow arrow-right">this is a nice block of text</div>      
+      </div>
+      <div class="l-code">
+<pre class="language-scss"><code>@include mixin;
+@include arrow(10px, #f4eedc, #d6c288, 50%, up);
+@include arrow(10px, #f4eedc, #d6c288, 50%, down);
+@include arrow(10px, #f4eedc, #d6c288, 50%, left);
+@include arrow(10px, #f4eedc, #d6c288, 50%, right);</code></pre>
+      </div>
+    </div>
+  </div>
+  <!-- / CSS arrows -->
+
+  <!-- Arrow links -->
+  <div class="l-wrap">
+    <div class="l-summary">
+      <h3>Simple arrow links</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat bibendum feugiat. Nunc nec libero posuere, egestas ligula eu, viverra dolor. Sed ullamcorper non dolor nec pharetra.</p>
+
+      <p class="note"><i class="icon icon-alert"></i> Doesn't work well with wrapping links, treat with care.</p>
+    </div>
+    <div class="l-content">
+      <div class="l-preview">
+        <p>some text <a href="#" class="link-arrow up">this is a link that should be pointing up</a> surrounding it</p>
+        <p>some text <a href="#" class="link-arrow down">this is a link that should be pointing down</a> surrounding it</p>
+        <p>some text <a href="#" class="link-arrow left">this is a link that should be pointing left</a> surrounding it</p>
+        <p>some text <a href="#" class="link-arrow right">this is a link that should be pointing right</a> surrounding it</p>
+
+        <p>It's even smart enough <a href="#" class="link-arrow down" style="color: red">to inherit color from the link</a></p>
+      </div>
+      <div class="l-code">
+<pre class="language-markup"><code>&lt;a href="#" class="link-arrow up"&gt;...&lt;/a&gt;
+&lt;a href="#" class="link-arrow down"&gt;...&lt;/a&gt;
+&lt;a href="#" class="link-arrow left"&gt;...&lt;/a&gt;
+&lt;a href="#" class="link-arrow right"&gt;...&lt;/a&gt;</code></pre>        
+      </div>
+    </div>
+  </div>
+  <!-- / Arrow links -->
+
+</body>
+</html>
