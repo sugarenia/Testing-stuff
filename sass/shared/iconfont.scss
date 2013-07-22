@@ -1,0 +1,65 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('font/iconfont.eot?93020625');
+  src: url('font/iconfont.eot?93020625#iefix') format('embedded-opentype'),
+       url('font/iconfont.woff?93020625') format('woff'),
+       url('font/iconfont.ttf?93020625') format('truetype'),
+       url('font/iconfont.svg?93020625#iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'iconfont';
+    src: url('font/iconfont.svg?93020625#iconfont') format('svg');
+  }
+}
+*/
+ 
+ .icon:before {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  // margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  // margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+ 
+
+.icon-info:before { content: '\e809'; } /* '' */
+.icon-up-dir:before { content: '\e80b'; } /* '' */
+.icon-right-dir:before { content: '\e80d'; } /* '' */
+.icon-down-dir:before { content: '\e808'; } /* '' */
+.icon-left-dir:before { content: '\e80c'; } /* '' */
+.icon-alert:before { content: '\e806'; } /* '' */
+.icon-mail:before { content: '\e805'; } /* '' */
+.icon-pencil:before { content: '\e801'; } /* '' */
+.icon-ok:before { content: '\e807'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
+.icon-eye:before { content: '\e800'; } /* '' */
+.icon-flow-tree:before { content: '\e802'; } /* '' */
+.icon-user:before { content: '\e804'; } /* '' */
+.icon-briefcase:before { content: '\e80e'; } /* '' */
+.icon-block:before { content: '\e80a'; } /* '' */

@@ -1,0 +1,139 @@
+/* Form styles */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"] {
+  font-size: 13px;
+  background-color: #fff;
+  color: $color-gray-dark;
+  border: 1px solid $color-gray-lighter;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  @include transition(border 0.2s linear 0s, box-shadow 0.2s linear 0s);
+  padding: 4px 6px;
+  height: 32px;
+  line-height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+
+  @include placeholder { color: $color-gray-light; }
+}
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+  background-color: #fff;
+  border: 1px solid lighten($color-blue, 30%);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 2px lighten($color-blue, 50%);
+  outline: none;  
+
+  @include placeholder { color: $color-gray-lighter; }
+}
+input[type="password"]  { font-size: 18px; }
+textarea                { height: auto; }
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  background-color: #eee;
+  color: $color-gray-light;
+  cursor: not-allowed;
+}
+
+/* Form rows */
+.form-row {
+  @include clearfix;
+  margin-bottom: 15px;
+
+  &.required {
+    .form-row-label:before {
+      content: "*";
+      color: $color-red;
+      margin-right: 5px;
+    }
+  }
+}
+.form-row-label {
+
+}
+
+/* Special classes */
+.field-icon {
+  display: inline-block;
+  @include position(relative);
+
+  .icon {
+    @include position(absolute, 6px 0 0 10px);
+    color: $color-gray-lighter;
+    @include transition(all 0.2s linear 0s);
+  }
+  input {
+    padding-left: 30px;
+
+    &:focus + i {
+      color: lighten($color-blue, 30%);
+    }
+    &.field-large {
+      padding-left: 30px;
+
+      & + i {
+        @include position(absolute, 8px 0 0 8px);
+      }
+    }
+  }
+}
+
+input.field-large,
+select.field-large,
+textarea.field-large {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  height: 36px;
+  line-height: 36px;
+}
+
+/* Helper text */
+.help-block,
+.help-inline {
+  font-size: 12px;
+  color: $color-gray;
+}
+.help-block {
+  display: block;
+  margin-top: 5px;
+}
+.help-inline {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}

@@ -1,0 +1,120 @@
+@import "backend";
+
+body { 
+  width: 768px; 
+  margin: 20px auto; 
+  background: #fff;
+}
+// .form-row-label { display: inline-block; width: 180px; text-align: right; font-weight: bold; margin-right: 10px; color: #666; }
+// input { width: 200px; }
+
+// Typography
+h2 {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+h3 {
+  margin: 0 0 1em;
+}
+.note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: $color-gray-light !important;
+
+  .icon { color: $color-gray-lighter; }
+}
+
+// Examples
+.l-wrap {
+  @include clearfix;
+
+  & + .l-wrap {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dotted $color-gray-lighter;
+  }
+}
+.l-summary {
+  float: left;
+  width: 30%;
+  @include box-sizing(border-box);
+
+  p {
+    color: $color-gray;
+  }
+}
+.l-content {
+  float: right;
+  width: 60%;
+  @include box-sizing(border-box);
+}
+.l-preview {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 40px 20px 20px;
+  position: relative;
+
+  &:before {
+    content: "Preview";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-gray-lighter;
+    border-radius: 4px 0;
+    background: #fafafa;
+    color: $color-gray-light;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 7px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+}
+.l-code {
+  pre {
+    margin: 30px 0 0 !important;
+    border-radius: 4px;
+    border: 1px solid black(0.1);
+    padding: 40px 20px 20px !important;
+    position: relative;
+    background: #fff !important;
+
+    &:before {
+      content: "Code";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: $color-gray-lighter;
+      border-radius: 4px 0;
+      background: #fafafa;
+      color: $color-gray-light;
+      font: bold 12px $font-family-base;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 3px 7px;
+      border-right: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}
+
+// Special cases
+.navbar                 { position: static; }
+.alert:last-child       { margin-bottom: 0; }
+.nav-pills + .nav-pills,
+.nav-tabs + .nav-tabs,
+.nav-pagination + .nav-pagination   { margin-top: 30px; }
+.arrow {
+  background: #f4eedc;
+  border: 1px solid #d6c288;
+  color: #5c4e25;
+  padding: 15px;
+  border-radius: 3px;
+
+  & + .arrow      { margin-top: 20px; }
+  &.arrow-up      { @include arrow(10px, #f4eedc, #d6c288, 50%, up); }
+  &.arrow-down    { @include arrow(10px, #f4eedc, #d6c288, 50%, down); }
+  &.arrow-left    { @include arrow(10px, #f4eedc, #d6c288, 50%, left); }
+  &.arrow-right   { @include arrow(10px, #f4eedc, #d6c288, 50%, right); }
+}

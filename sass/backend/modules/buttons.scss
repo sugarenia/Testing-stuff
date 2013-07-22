@@ -1,0 +1,36 @@
+/* Buttons */
+.btn-base {
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  padding: 6px 12px;
+
+  font-size: 13px;
+  line-height: 1.5em;
+
+  box-shadow: inset 0 1px 0 white(0.2), 0 1px 2px black(0.05);
+}
+.btn {
+  @extend .btn-base;
+
+  background: #fff;
+  border: 1px solid #ddd;
+  border-color: #ddd #ddd #ccc;
+  color: $color-gray;
+}
+
+/* Colour variations */
+.btn-primary {
+  @extend .btn-base;
+  
+  @include linear-gradient(#2A7AA6, #1C537B);
+  border: 1px solid #143b53;
+
+  &:hover {
+    @include linear-gradient(lighten(#2A7AA6, 3%), lighten(#1C537B, 3%));
+    // @include box-shadow(0 0 5px $blue);
+  }
+}

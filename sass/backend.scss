@@ -1,0 +1,41 @@
+/*-----------------------------*\
+ * VARIABLES
+\*-----------------------------*/
+
+/* Colors */
+$color-teal: #4AA1A1;
+$color-blue: #236690;
+$color-green: #67942a;
+$color-red: #BA474A;
+$color-yellow: #efad11;
+$color-gray-dark: #333;
+$color-gray: #666;
+$color-gray-light: #999;
+$color-gray-lighter: #ccc;
+$color-gray-background: #f2f2f2;
+
+/* Typography */
+$font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-fancy: "myriad-pro", sans-serif;
+$font-family-handwritten: "PF Reminder Pro", serif;
+$font-family-monospace: Monaco, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+
+$font-size-smaller: 12px;
+$font-size-normal: 13px;
+$font-size-bigger: 14px;
+
+/*-----------------------------*\
+ * IMPORTS
+\*-----------------------------*/
+
+@import "bourbon";
+@import "shared/normalize";
+@import "shared/iconfont";
+@import "shared/utility";
+
+@import "backend/base";
+@import "backend/modules/alerts";
+@import "backend/modules/forms";
+@import "backend/modules/navigation";
+@import "backend/modules/buttons";
+

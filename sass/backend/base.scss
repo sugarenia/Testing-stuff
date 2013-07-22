@@ -1,0 +1,32 @@
+/* Base rules */
+*,
+*:before,
+*:after { 
+  @include box-sizing(border-box);
+}
+body {
+  font: 13px/1.5 $font-family-base;
+  background: $color-gray-background;
+  color: $color-gray-dark;
+}
+p  {
+  margin: 0 0 10px;
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  } 
+}
+a {
+  color: $color-blue;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+h1 { font-size: 30px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
