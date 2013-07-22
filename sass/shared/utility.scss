@@ -34,6 +34,9 @@
     &:after {
       left: $offset;
       bottom: 100%;
+      @if ($backgroundColor != inherit) {
+        border-color: rgba($backgroundColor, 0);
+      }
       border-bottom-color: $backgroundColor;
       border-width: $size;
       margin-left: -$size;
@@ -42,6 +45,9 @@
       &:before {
         left: $offset;
         bottom: 100%;
+        @if ($borderColor != inherit) {
+        border-color: rgba($borderColor, 0);
+      }
         border-bottom-color: $borderColor;
         border-width: $size + 1;
         margin-left: -($size + 1);
