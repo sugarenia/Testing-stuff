@@ -26,6 +26,7 @@
   position: relative;
 
   &:after { @extend .arrow-base; }
+
   @if ($borderColor != transparent) {
     &:before { @extend .arrow-base; }
   }
@@ -34,9 +35,11 @@
     &:after {
       left: $offset;
       bottom: 100%;
+      
       @if ($backgroundColor != inherit) {
         border-color: rgba($backgroundColor, 0);
       }
+
       border-bottom-color: $backgroundColor;
       border-width: $size;
       margin-left: -$size;
@@ -45,9 +48,11 @@
       &:before {
         left: $offset;
         bottom: 100%;
+
         @if ($borderColor != inherit) {
-        border-color: rgba($borderColor, 0);
-      }
+          border-color: rgba($borderColor, 0);
+        }
+
         border-bottom-color: $borderColor;
         border-width: $size + 1;
         margin-left: -($size + 1);
@@ -58,6 +63,11 @@
     &:after {
       left: $offset;
       top: 100%;
+
+      @if ($backgroundColor != inherit) {
+        border-color: rgba($backgroundColor, 0);
+      }
+
       border-top-color: $backgroundColor;
       border-width: $size;
       margin-left: -$size;
@@ -66,6 +76,11 @@
       &:before {
         left: $offset;
         top: 100%;
+
+        @if ($borderColor != inherit) {
+          border-color: rgba($borderColor, 0);
+        }
+
         border-top-color: $borderColor;
         border-width: $size + 1;
         margin-left: -($size + 1);
@@ -76,6 +91,11 @@
     &:after {
       right: 100%;
       top: $offset;
+
+      @if ($backgroundColor != inherit) {
+        border-color: rgba($backgroundColor, 0);
+      }
+
       border-right-color: $backgroundColor;
       border-width: $size;
       margin-top: -$size;
@@ -84,6 +104,11 @@
       &:before {
         right: 100%;
         top: $offset;
+
+        @if ($borderColor != inherit) {
+          border-color: rgba($borderColor, 0);
+        }
+
         border-right-color: $borderColor;
         border-width: $size + 1;
         margin-top: -($size + 1);
@@ -94,6 +119,11 @@
     &:after {
       left: 100%;
       top: $offset;
+
+      @if ($backgroundColor != inherit) {
+        border-color: rgba($backgroundColor, 0);
+      }
+
       border-left-color: $backgroundColor;
       border-width: $size;
       margin-top: -$size;
@@ -102,6 +132,11 @@
       &:before {
         left: 100%;
         top: $offset;
+
+        @if ($borderColor != inherit) {
+          border-color: rgba($borderColor, 0);
+        }
+
         border-left-color: $borderColor;
         border-width: $size + 1;
         margin-top: -($size + 1);

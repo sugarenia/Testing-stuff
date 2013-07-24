@@ -105,6 +105,11 @@ h3 {
 .nav-pills + .nav-pills,
 .nav-tabs + .nav-tabs,
 .nav-pagination + .nav-pagination   { margin-top: 30px; }
+.buttons {
+  [class^="btn"] + [class^="btn"] { margin-left: 10px; } 
+  text-align: center; 
+}
+
 .arrow {
   background: #f4eedc;
   border: 1px solid #d6c288;
